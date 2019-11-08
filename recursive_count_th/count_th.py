@@ -6,5 +6,14 @@ Your function must utilize recursion. It cannot contain any loops.
 def count_th(word):
     
     # TBC
-    
-    pass
+
+    finder = 'th'
+
+    if len(word) < 2:
+        return 0
+
+    if word[0:2] == finder:
+        return count_th(word[1:]) + 1
+
+    return count_th(word[1:])
+ 
